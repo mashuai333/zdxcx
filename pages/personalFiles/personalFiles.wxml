@@ -1,0 +1,4 @@
+<!--pages/personalFiles/personalFiles.wxml-->
+<view>
+  <text>个人档案</text>
+</view>

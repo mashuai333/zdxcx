@@ -1,0 +1,25 @@
+<!--pages/eventMuseum/eventMuseum.wxml-->
+<scroll-view scroll-x="true" class="menubar">
+    <view class="menu">
+        <text class="{{dataId=='0'?'active':''}}" bindtap="check" id="top" data-id="0">时事热点</text>
+        <text class="{{dataId=='1'?'active':''}}" bindtap="check" id="shehui" data-id="1">明星娱乐</text>
+        <text class="{{dataId=='2'?'active':''}}" bindtap="check" id="guonei" data-id="2">体育赛事</text>
+        <text class="{{dataId=='3'?'active':''}}" bindtap="check" id="guoji" data-id="3">专题</text>
+    </view>
+</scroll-view><scroll-view scroll-y="true" class="content" style="height: {{windowHeight}}px; width: {{windowWidth}}px;" scroll-y="true" bindscrolltoupper="pullDownRefresh" bindscrolltolower="pullUpLoad">
+    <!--top-->
+    <!-- <view class="newsBox top">
+        <block wx:for="{{title}}">
+            <navigator class="details">
+                <text class="title">{{title[index]}}</text>
+                <view class="picBox">
+                    <image src="{{imgUrls[index]}}"></image>
+                </view>
+                <view class="info">
+                    <text class="author">{{author[index]}}</text>
+                    <text class="date">{{date[index]}}</text>
+                </view>
+            </navigator>
+        </block>
+    </view> -->
+</scroll-view>

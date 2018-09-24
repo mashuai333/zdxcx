@@ -1,0 +1,40 @@
+/* pages/home/home.wxss */
+.header{
+    height: 80rpx;
+    background: #fbfbfb;
+}
+.address{
+     text-align: center;    
+}
+.adressCurrent{
+   display: block;
+   line-height:80rpx;
+   font-size: 26rpx;
+   padding-left: 20rpx;
+   position: relative;
+}
+.adressCurrent:after{
+  font-family: 'iconfont';
+  font-style: normal;
+  font-size: 56rpx;
+  content: '\e608'
+}
+.search{
+    text-align: center;
+    font-size: 11px;
+    width:600rpx;
+    background:#efefef;
+    position: absolute;
+    top: 14rpx;
+    right:40rpx;
+    border-radius: 30rpx;
+}
+.search icon{
+    float: left;
+    position: absolute;
+    top:25%;
+    left: 5%;
+}
+.search input{
+   float: left;
+}

@@ -1,0 +1,4 @@
+<!--pages/attention/attention.wxml-->
+<view>
+  <text>这里是关注页</text>
+</view>

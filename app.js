@@ -34,6 +34,16 @@ App({
     })
   },
   globalData: {
-    userInfo: null
-  }
+    userInfo:null,
+    count:1
+  },
+  title: [],
+  imgUrls: [],
+  author: [],
+  date: [],
+  url: [],
+  requestUrl: "top",
+  cssActive: 0,
+  page: 0,
+
 })
