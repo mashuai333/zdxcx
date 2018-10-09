@@ -2,10 +2,8 @@
 <view class="header">
   <image class="background" src="../../lib/imgs/home_background.png">
   </image>
-  <view class="adress">
-    <text class="adressCurrent">
-    </text>
-  </view>
+  <image class="classify" src="../../lib/imgs/classify.png">
+  </image>
   <view class="search">
     <icon type="search" size="12"></icon>
     <input type="text" placeholder="搜点什么呢？" />
@@ -13,21 +11,6 @@
   <!-- <block wx:for="{{[1, 2, 3]}}">
     <view> {{index}}: {{item}}</view>
   </block> -->
-  <switch wx:for="{{objectArray}}" wx:key="unique" style="display: block;"> {{item.id}} </switch>
-  <button bindtap="switch"> Switch </button>
-  <button bindtap="addToFront"> Add to the front </button>
-
-  <switch wx:for="{{numberArray}}" wx:key="*this" style="display: block;"> {{item}} </switch>
-  <button bindtap="addNumberToFront"> Add to the front </button>
-  <template name="staffName">
-    <view>
-      FirstName: {{firstName}}, LastName: {{lastName}}
-    </view>
-  </template>
-
-  <template is="staffName" data="{{...staffA}}"></template>
-  <template is="staffName" data="{{...staffB}}"></template>
-  <template is="staffName" data="{{...staffC}}"></template>
   <!-- <view bindtap="viewTap"> click me </view>
   <view>{{text}}</view>
   <button bindtap="changeText"> Change normal data </button>

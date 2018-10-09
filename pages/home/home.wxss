@@ -4,27 +4,19 @@ page{
 }
 .header{
     height: 80rpx;
+    position: relative;
     /* background: #fbfbfb url("lib/imgs/home_background.png") no-repeat; */
 }
 .background{
     height: 80rpx;
     width: 100%;
 }
-.address{
-     /* text-align: center;     */
-}
-.adressCurrent{
-   display: block;
-   line-height:80rpx;
-   font-size: 26rpx;
-   padding-left: 20rpx;
-   position: relative;
-}
-.adressCurrent:after{
-  font-family: 'iconfont';
-  font-style: normal;
-  font-size: 56rpx;
-  content: '\e608'
+.classify{
+  height: 70rpx;
+  width: 76rpx;
+  position: absolute;
+  left: 10rpx;
+  top:4rpx;
 }
 .search{
     text-align: center;
@@ -37,11 +29,19 @@ page{
     border-radius: 30rpx;
 }
 .search icon{
-    float: left;
     position: absolute;
     top:25%;
     left: 5%;
 }
-.search input{
-   float: left;
+/* .adressCurrent{
+   display: block;
+   line-height:80rpx;
+   font-size: 26rpx;
+   padding-left: 20rpx;
 }
+.adressCurrent:after{
+  font-family: 'iconfont';
+  font-style: normal;
+  font-size: 56rpx;
+  content: '\e608'
+} */
