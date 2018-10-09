@@ -1,17 +1,34 @@
 <!--pages/home/home.wxml-->
 <view class="header">
+  <image class="background" src="../../lib/imgs/home_background.png">
+  </image>
   <view class="adress">
     <text class="adressCurrent">
-        <!-- <text class="sanjiao"></text>
-        <text class="sanjiao2"></text> -->
     </text>
   </view>
   <view class="search">
     <icon type="search" size="12"></icon>
     <input type="text" placeholder="搜点什么呢？" />
   </view>
-  <view bindtap="viewTap"> click me </view>
+  <!-- <block wx:for="{{[1, 2, 3]}}">
+    <view> {{index}}: {{item}}</view>
+  </block> -->
+  <switch wx:for="{{objectArray}}" wx:key="unique" style="display: block;"> {{item.id}} </switch>
+  <button bindtap="switch"> Switch </button>
+  <button bindtap="addToFront"> Add to the front </button>
 
+  <switch wx:for="{{numberArray}}" wx:key="*this" style="display: block;"> {{item}} </switch>
+  <button bindtap="addNumberToFront"> Add to the front </button>
+  <template name="staffName">
+    <view>
+      FirstName: {{firstName}}, LastName: {{lastName}}
+    </view>
+  </template>
+
+  <template is="staffName" data="{{...staffA}}"></template>
+  <template is="staffName" data="{{...staffB}}"></template>
+  <template is="staffName" data="{{...staffC}}"></template>
+  <!-- <view bindtap="viewTap"> click me </view>
   <view>{{text}}</view>
   <button bindtap="changeText"> Change normal data </button>
   <view>{{num}}</view>
@@ -21,5 +38,5 @@
   <view>{{object.text}}</view>
   <button bindtap="changeItemInObject"> Change Object data </button>
   <view>{{newField.text}}</view>
-  <button bindtap="addNewField"> Add new data </button>
+  <button bindtap="addNewField"> Add new data </button> -->
 </view>

@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/eventMuseum/eventMuseum",
     "pages/home/home",
     "pages/attention/attention",
     "pages/personalFiles/personalFiles",
+    "pages/eventMuseum/eventMuseum",
     "pages/index/index",
     "pages/logs/logs"
   ],
@@ -20,25 +20,25 @@
         "pagePath": "pages/home/home",
         "text": "首页",
         "iconPath": "lib/imgs/home.png",
-        "selectedIconPath": "lib/imgs/home_s.png"
+        "selectedIconPath": "lib/imgs/home1.png"
       },
       {
         "pagePath": "pages/attention/attention",
         "text": "我的关注",
         "iconPath": "lib/imgs/attention.png",
-        "selectedIconPath": "lib/imgs/attention_s.png"
+        "selectedIconPath": "lib/imgs/attention1.png"
       },
       {
         "pagePath": "pages/personalFiles/personalFiles",
         "text": "个人档案",
         "iconPath": "lib/imgs/personal.png",
-        "selectedIconPath": "lib/imgs/personal_s.png"
+        "selectedIconPath": "lib/imgs/personal1.png"
       },
       {
         "pagePath": "pages/eventMuseum/eventMuseum",
         "text": "事件博物馆",
         "iconPath": "lib/imgs/story.png",
-        "selectedIconPath": "lib/imgs/story_s.png"
+        "selectedIconPath": "lib/imgs/story1.png"
       }
     ],
     "borderStyle":"black",
@@ -51,5 +51,6 @@
     "downloadFile": 10000
   },
   "debug": true,
-  "functionalPages": true
+  "functionalPages": true,
+  "resizable": true
 }

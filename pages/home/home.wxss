@@ -1,10 +1,17 @@
 /* pages/home/home.wxss */
+page{
+    /* background: red; */
+}
 .header{
     height: 80rpx;
-    background: #fbfbfb;
+    /* background: #fbfbfb url("lib/imgs/home_background.png") no-repeat; */
+}
+.background{
+    height: 80rpx;
+    width: 100%;
 }
 .address{
-     text-align: center;    
+     /* text-align: center;     */
 }
 .adressCurrent{
    display: block;
