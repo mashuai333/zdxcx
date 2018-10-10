@@ -26,7 +26,8 @@ Page({
       {id: 1, unique: 'unique_1'},
       {id: 0, unique: 'unique_0'},
     ],
-    numberArray: [1, 2, 3, 4]
+    numberArray: [1, 2, 3, 4],
+    items:[{value:1},{value:1},{value:1},{value:1}]
   },
   switch: function(e) {
     const length = this.data.objectArray.length
@@ -191,7 +192,9 @@ Page({
     console.log('item2222' + item.pagePath)
     console.log('item3333' + item.text)
   },
-
+  InputSearch: function(e){
+    console.log(e.detail.value);
+  },
   viewTap: function () {
     console.log('view tap')
   },

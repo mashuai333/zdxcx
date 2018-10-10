@@ -1,7 +1,7 @@
 /* pages/home/home.wxss */
-page{
-    /* background: red; */
-}
+/* page{
+    background: red;
+} */
 .header{
     height: 80rpx;
     position: relative;
@@ -45,3 +45,35 @@ page{
   font-size: 56rpx;
   content: '\e608'
 } */
+.scroll_view{
+    padding:30rpx 20rpx;
+}
+.head{
+    background: #666;
+    height: 70rpx;
+    display: flex;
+    width:700rpx;
+    border-radius: 8rpx 8rpx 0 0;
+}
+.topic{
+    font-size: 32rpx;
+    line-height: 70rpx;
+    flex: auto;
+    padding-left: 30rpx;
+}
+.vsimg{
+    width: 60rpx;
+    height: 70rpx;
+    margin:auto;
+}
+.leftTime{
+    font-size: 20rpx;
+    line-height: 70rpx;
+    flex:auto;
+    padding-left: 50rpx;
+}
+.main{
+    height: 235rpx;
+    width: 700rpx;
+    background: green;
+}
