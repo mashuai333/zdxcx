@@ -3,5 +3,8 @@
   "navigationBarBackgroundColor": "#fff",
   "navigationBarTitleText": "首页",
   "navigationBarTextStyle": "black",
-  "navigationStyle": "default"
+  "navigationStyle": "default",
+  "usingComponents": {
+    "singleTopic": "/components/singleTopic/singleTopic"
+  }
 }

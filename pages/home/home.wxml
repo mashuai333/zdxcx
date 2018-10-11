@@ -8,6 +8,7 @@
     <icon type="search" size="12"></icon>
     <input type="text" placeholder="搜点什么呢？" />
   </view>
+  
   <!-- <block wx:for="{{[1, 2, 3]}}">
     <view> {{index}}: {{item}}</view>
   </block> -->
@@ -22,4 +23,13 @@
   <button bindtap="changeItemInObject"> Change Object data </button>
   <view>{{newField.text}}</view>
   <button bindtap="addNewField"> Add new data </button> -->
+</view>
+<view class="singleTopic-box">
+  <view class="singleTopic"  wx:for="{{[1, 2, 3]}}">
+    <singleTopic id='singleTopic' 
+      title='中兴芯片危机' 
+      time='1111'
+      data='{}'>
+    </singleTopic>
+  </view>
 </view>

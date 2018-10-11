@@ -45,3 +45,14 @@ page{
   font-size: 56rpx;
   content: '\e608'
 } */
+.singleTopic-box{
+  width: 100%;
+  padding: 10rpx;
+  box-sizing: border-box;
+  background: rgb(245,249,250);
+}
+.singleTopic{
+  width: 100%;
+  font-size: 14px;
+  margin-top:20rpx;
+}
