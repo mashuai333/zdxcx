@@ -45,7 +45,8 @@
   font-size: 56rpx;
   content: '\e608'
 } */
-.scroll_view{
+
+/* .scroll_view{
     padding:30rpx 20rpx;
 }
 .head{
@@ -75,5 +76,16 @@
 .main{
     height: 235rpx;
     width: 700rpx;
-    background: green;
+    background: green; */
+
+.singleTopic-box{
+  width: 100%;
+  padding: 10rpx;
+  box-sizing: border-box;
+  background: rgb(245,249,250);
+}
+.singleTopic{
+  width: 100%;
+  font-size: 14px;
+  margin-top:20rpx;
 }

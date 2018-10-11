@@ -1,0 +1,33 @@
+.wx_single_topic_container{
+    width: 100%;
+    height: 360rpx;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 1 0 0;
+}
+.st_header{
+    height: 44rpx;
+    font-size: 16px;
+    padding:20rpx;
+    color:#fff;
+}
+.st_time{
+  float:right;
+  font-size: 12px;
+}
+.st_time text{
+  color:#333;
+  width: 30rpx;
+  height: 30rpx;
+  text-align: center;
+  background: #fff;
+  display: inline-block;
+  margin-right:5rpx;
+}
+.st_chart{
+  height:280rpx;
+}
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}

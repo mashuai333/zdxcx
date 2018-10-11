@@ -1,0 +1,9 @@
+<view class='wx_single_topic_container'>
+    <view class="st_header" style="background:{{'url(../../lib/imgs/home_background.png) no-repeat'}}" >
+        <text>{{title}}</text>
+        <view class="st_time">距结束 <text>1</text><text>1</text>时 <text>1</text><text>1</text>分</view> 
+    </view>
+    <view class='st_chart'>
+        <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+    </view>
+</view>

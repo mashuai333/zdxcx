@@ -8,6 +8,7 @@
     <icon type="search" size="12"></icon>
     <input type="text" placeholder="搜点什么呢？" adjust-position='true' name='search' bindinput='InputSearch'/>
   </view>
+  
   <!-- <block wx:for="{{[1, 2, 3]}}">
     <view> {{index}}: {{item}}</view>
   </block> -->
@@ -23,7 +24,8 @@
   <view>{{newField.text}}</view>
   <button bindtap="addNewField"> Add new data </button> -->
 </view>
-<scroll-view class="scroll_view" scroll-x="false" scroll-y="true" upper-threshold="50" lower-threshold="50" 
+
+<!-- <scroll-view class="scroll_view" scroll-x="false" scroll-y="true" upper-threshold="50" lower-threshold="50" 
   scroll-top="0" scroll-left="0" scroll-into-view="" scroll-with-animation="false" enable-back-to-top="false" 
   bindscrolltoupper="" bindscrolltolower="" bindscroll="">
   <block wx:key="{{items}}">
@@ -43,4 +45,13 @@
       </view>
     </view>
   </block>
-</scroll-view>
+</scroll-view> -->
+<view class="singleTopic-box">
+  <view class="singleTopic"  wx:for="{{[1, 2, 3]}}">
+    <singleTopic id='singleTopic' 
+      title='中兴芯片危机' 
+      time='1111'
+      data='{}'>
+    </singleTopic>
+  </view>
+</view>
