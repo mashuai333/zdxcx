@@ -1,4 +1,11 @@
 <!--pages/attention/attention.wxml-->
-<view>
-  <text>这里是关注页</text>
+<view class="singleTopic-box">
+  <view class="singleTopic"  wx:for="{{[1, 2, 3]}}">
+    <singleTopic id='singleTopic' 
+      title='中兴芯片危机' 
+      time='1111'
+      data='{}'
+      follow='true'>
+    </singleTopic>
+  </view>
 </view>

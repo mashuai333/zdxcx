@@ -9,20 +9,47 @@ function initChart(canvas, width, height) {
   canvas.setChart(chart);
 
   var option = {
+    tooltip: {
+      trigger: 'axis'
+    },
+    backgroundColor: 'rgb(236,236,236)',
+    legend: {
+      data: ['美国无耻', '中兴无信']
+    },
+    grid: {
+      top: 40,
+      left:20,
+      right:20,
+      bottom: 20
+    },
     xAxis: {
       type: 'category',
       boundaryGap: false,
-      data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+      data: ['', '', '', '', '', '','']
     },
     yAxis: {
-      type: 'value'
+      show: false,
+      type: 'value',
+      axisLabel: {
+        formatter: '{value} %'
+      }
     },
     series: [
       {
-        name: '邮件营销',
+        name: '美国无耻',
         type: 'line',
-        stack: '总量',
-        data: [20, 32, 1, 34, 9, 23, 21]
+        itemStyle: {
+          color: '#f66'
+        },
+        data: [11, 11, 15, 13, 12, 13, 10]
+      },
+      {
+        name: '中兴无信',
+        type: 'line',
+        itemStyle: {
+          color: '#67b9ff'
+        },
+        data: [-11, -11, -15, -13, -12, -13, -10]
       }
     ]
   };
@@ -54,6 +81,11 @@ Component({
       data :{
         type : Array ,
         value : '数据'
+      },
+      // 关注
+      follow: {
+        type: String,
+        value: '关注'
       }
     },
   
@@ -64,14 +96,39 @@ Component({
     data: {
       ec: {
         onInit: initChart
-      }
+      },
+      timeStr: []
     },
-  
+    ready: function () {
+      console.log(this.properties.time)
+      this.countDown(18204)
+    },
     /**
      * 组件的方法列表
      * 更新属性和数据的方法与更新页面数据的方法类似
      */
     methods: {
-       
+      countDown(times) {
+        var timer = null;
+        timer = setInterval( () => {
+          var hour = 0,
+            minute = 0,
+            second = 0;//时间默认值
+          if (times > 0) {
+            hour = Math.floor(times / (60 * 60));
+            minute = Math.floor(times / 60) - (hour * 60);
+            second = Math.floor(times) - (hour * 60 * 60) - (minute * 60);
+          }
+          if (hour <= 9) hour = '0' + hour;
+          if (minute <= 9) minute = '0' + minute;
+          if (second <= 9) second = '0' + second;
+          //
+          this.setData({ timeStr: (hour + '' + minute).split('')})
+          times--;
+        }, 1000);
+        if (times <= 0) {
+          clearInterval(timer);
+        }
+      }
     }
   })

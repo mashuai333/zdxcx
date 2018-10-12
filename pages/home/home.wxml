@@ -51,7 +51,8 @@
     <singleTopic id='singleTopic' 
       title='中兴芯片危机' 
       time='1111'
-      data='{}'>
+      data='{}'
+      follow='false'>
     </singleTopic>
   </view>
 </view>
