@@ -1,12 +1,32 @@
 /* pages/attention/attention.wxss */
 .singleTopic-box{
   width: 100%;
-  padding: 10rpx;
   box-sizing: border-box;
   background: rgb(245,249,250);
+  /* padding: 16rpx; */
+  position: relative;
 }
 .singleTopic{
   width: 100%;
   font-size: 14px;
-  margin-top:20rpx;
+  margin:20rpx 0;
+  z-index: 10;
+  margin:20rpx 0;
+  position: absolute;
+  top:-20rpx;
+}
+.posit{
+  height: 396rpx;
+  line-height:396rpx; 
+  margin:20rpx 0;
+  width: 100%;
+  background:#8d8d8d;
+  color: #FFF;
+  font-size: 32rpx;
+  border-radius: 12rpx;
+  z-index: 0;
+}
+.cancle{
+  padding-right: 12rpx;
+  float: right;
 }

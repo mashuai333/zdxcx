@@ -1,4 +1,4 @@
-import * as echarts from '../../ec-canvas/echarts';
+import * as echarts from '../../lib/ec-canvas/echarts';
 let chart = null;
 
 function initChart(canvas, width, height) {
@@ -18,14 +18,14 @@ function initChart(canvas, width, height) {
     },
     grid: {
       top: 40,
-      left:20,
-      right:20,
+      left: 20,
+      right: 20,
       bottom: 20
     },
     xAxis: {
       type: 'category',
       boundaryGap: false,
-      data: ['', '', '', '', '', '','']
+      data: ['', '', '', '', '', '', '']
     },
     yAxis: {
       show: false,
@@ -59,76 +59,76 @@ function initChart(canvas, width, height) {
 }
 
 Component({
-    options: {
-      multipleSlots: true // 在组件定义时的选项中启用多slot支持
+  options: {
+    multipleSlots: true // 在组件定义时的选项中启用多slot支持
+  },
+  /**
+   * 组件的属性列表
+   * 用于组件自定义设置
+   */
+  properties: {
+    // 弹窗标题
+    title: {            // 属性名
+      type: String,     // 类型（必填），目前接受的类型包括：String, Number, Boolean, Object, Array, null（表示任意类型）
+      value: '标题'     // 属性初始值（可选），如果未指定则会根据类型选择一个
     },
-    /**
-     * 组件的属性列表
-     * 用于组件自定义设置
-     */
-    properties: {
-      // 弹窗标题
-      title: {            // 属性名
-        type: String,     // 类型（必填），目前接受的类型包括：String, Number, Boolean, Object, Array, null（表示任意类型）
-        value: '标题'     // 属性初始值（可选），如果未指定则会根据类型选择一个
-      },
-      // 时间
-      time :{
-        type : String ,
-        value : '时间'
-      },
-      // 数据
-      data :{
-        type : Array ,
-        value : '数据'
-      },
-      // 关注
-      follow: {
-        type: String,
-        value: '关注'
-      }
+    // 时间
+    time: {
+      type: String,
+      value: '时间'
     },
-  
-    /**
-     * 私有数据,组件的初始数据
-     * 可用于模版渲染
-     */
+    // 数据
     data: {
-      ec: {
-        onInit: initChart
-      },
-      timeStr: []
+      type: Array,
+      value: '数据'
     },
-    ready: function () {
-      console.log(this.properties.time)
-      this.countDown(18204)
-    },
-    /**
-     * 组件的方法列表
-     * 更新属性和数据的方法与更新页面数据的方法类似
-     */
-    methods: {
-      countDown(times) {
-        var timer = null;
-        timer = setInterval( () => {
-          var hour = 0,
-            minute = 0,
-            second = 0;//时间默认值
-          if (times > 0) {
-            hour = Math.floor(times / (60 * 60));
-            minute = Math.floor(times / 60) - (hour * 60);
-            second = Math.floor(times) - (hour * 60 * 60) - (minute * 60);
-          }
-          if (hour <= 9) hour = '0' + hour;
-          if (minute <= 9) minute = '0' + minute;
-          if (second <= 9) second = '0' + second;
-          //
-          this.setData({ timeStr: (hour + '' + minute).split('')})
-          times--;
-        }, 1000);
-        if (times <= 0) {
-          clearInterval(timer);
+    // 关注
+    follow: {
+      type: String,
+      value: '关注'
+    }
+  },
+  /**
+   * 私有数据,组件的初始数据
+   * 可用于模版渲染
+   */
+  data: {
+    ec: {
+      onInit: initChart
+    },  
+    timeStr: []
+  },
+  ready: function () {
+    console.log(this.properties.time);
+    this.countDown(18204)
+  },
+  /**
+   * 组件的方法列表
+   * 更新属性和数据的方法与更新页面数据的方法类似
+   */
+  methods: {
+    countDown(times) {
+      var timer = null;
+      timer = setInterval(() => {
+        var hour = 0,
+          minute = 0,
+          second = 0;//时间默认值
+        if (times > 0) {
+          hour = Math.floor(times / (60 * 60));
+          minute = Math.floor(times / 60) - (hour * 60);
+          second = Math.floor(times) - (hour * 60 * 60) - (minute * 60);
         }
+        if (hour <= 9) hour = '0' + hour;
+        if (minute <= 9) minute = '0' + minute;
+        if (second <= 9) second = '0' + second;
+        //
+        this.setData({ timeStr: (hour + '' + minute).split('') })
+        times--;
+      }, 1000);
+      if (times <= 0) {
+        clearInterval(timer);
       }
     }
-  })
+  },
+ 
+})

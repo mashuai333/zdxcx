@@ -1,7 +1,7 @@
 /* pages/home/home.wxss */
-/* page{
-    background: red;
-} */
+page{
+    background: #f5f9fa;
+}
 .header{
     height: 80rpx;
     position: relative;
@@ -12,11 +12,11 @@
     width: 100%;
 }
 .classify{
-  height: 70rpx;
-  width: 76rpx;
+  height: 55rpx;
+  width: 60rpx;
   position: absolute;
-  left: 10rpx;
-  top:4rpx;
+  left: 16rpx;
+  top:12rpx;
 }
 .search{
     text-align: center;
@@ -33,59 +33,14 @@
     top:25%;
     left: 5%;
 }
-/* .adressCurrent{
-   display: block;
-   line-height:80rpx;
-   font-size: 26rpx;
-   padding-left: 20rpx;
-}
-.adressCurrent:after{
-  font-family: 'iconfont';
-  font-style: normal;
-  font-size: 56rpx;
-  content: '\e608'
-} */
-
-/* .scroll_view{
-    padding:30rpx 20rpx;
-}
-.head{
-    background: #666;
-    height: 70rpx;
-    display: flex;
-    width:700rpx;
-    border-radius: 8rpx 8rpx 0 0;
-}
-.topic{
-    font-size: 32rpx;
-    line-height: 70rpx;
-    flex: auto;
-    padding-left: 30rpx;
-}
-.vsimg{
-    width: 60rpx;
-    height: 70rpx;
-    margin:auto;
-}
-.leftTime{
-    font-size: 20rpx;
-    line-height: 70rpx;
-    flex:auto;
-    padding-left: 50rpx;
-}
-.main{
-    height: 235rpx;
-    width: 700rpx;
-    background: green; */
-
 .singleTopic-box{
   width: 100%;
-  padding: 10rpx;
+  padding: 16rpx;
   box-sizing: border-box;
-  background: rgb(245,249,250);
+  background: #f5f9fa;
 }
 .singleTopic{
   width: 100%;
   font-size: 14px;
-  margin-top:20rpx;
+  margin:20rpx 0;
 }

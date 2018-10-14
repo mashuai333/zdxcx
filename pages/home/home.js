@@ -9,25 +9,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    text: 'init data',
-    num: 0,
-    array: [{ text: 'init data' }],
-    object: {
-      text: 'init data'
-    },
-    staffA: {firstName: 'Hulk', lastName: 'Hu'},
-    staffB: {firstName: 'Shang', lastName: 'You'},
-    staffC: {firstName: 'Gideon', lastName: 'Lin'},
-    objectArray: [
-      {id: 5, unique: 'unique_5'},
-      {id: 4, unique: 'unique_4'},
-      {id: 3, unique: 'unique_3'},
-      {id: 2, unique: 'unique_2'},
-      {id: 1, unique: 'unique_1'},
-      {id: 0, unique: 'unique_0'},
-    ],
-    numberArray: [1, 2, 3, 4],
-    items:[{value:1},{value:1},{value:1},{value:1}]
+    
   },
   switch: function(e) {
     const length = this.data.objectArray.length
@@ -186,11 +168,6 @@ Page({
     console.log('home页面在滚动')
   },
 
-  onTabItemTap(item){
-    console.log('item1111' + item.index)
-    console.log('item2222' + item.pagePath)
-    console.log('item3333' + item.text)
-  },
   InputSearch: function(e){
     console.log(e.detail.value);
   },
