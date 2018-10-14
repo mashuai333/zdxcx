@@ -1,4 +1,31 @@
 <!--pages/personalFiles/personalFiles.wxml-->
-<view>
-  <text>个人档案</text>
+<view class="personal">
+  <view class="histroy_data">
+    <view class="histroy_data_left">
+      <text class="main_header">平均发言N条</text>
+      <n />
+      <text class="vice_header">战胜了99%的用户</text>
+      <image class="pic" src="../../lib/imgs/SprayGod.png">
+      </image>
+    </view>
+    <view class="histroy_data_right">
+      <text class="main_header">参加过N个话题战队</text>
+      <text class="vice_header">战胜了15%的用户</text>
+      <image class="pic" src="../../lib/imgs/Rubberneck.png">
+      </image>
+    </view>
+    <view class="histroy_data_title" style="background:{{'url(../../lib/imgs/personal_bg.png) no-repeat'}};background-size:330rpx 60rpx">
+      <text class="text_title">个人历史数据</text>
+    </view>
+  </view>
+  <view class="personal_view_map">
+      <view class="trend_pic" >
+        22222222222222222
+      </view>
+      <image class="picc" src="../../lib/imgs/Rubberneck.png" mode="aspectFill" lazy-load="false" binderror="" bindload="">
+      </image>
+      <view class="personal_view_title" style="background:{{'url(../../lib/imgs/personal_bg.png) no-repeat'}};background-size:500rpx 60rpx">
+        <text class="text_title">个人观点支持率分布图</text>
+      </view>
+  </view>
 </view>

@@ -35,7 +35,6 @@ App({
   },
   globalData: {
     userInfo:null,
-    count:1
   },
   title: [],
   imgUrls: [],

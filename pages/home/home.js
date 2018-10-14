@@ -1,8 +1,8 @@
 // pages/home/home.js
 //获取应用实例
-const app = getApp()
-app.globalData.count+= 2
-console.log(getApp().globalData.count)
+// const app = getApp()
+// app.globalData.count+= 2
+// console.log(getApp().globalData.count)
 Page({
 
   /**

@@ -1,4 +1,7 @@
 /* pages/attention/attention.wxss */
+.myAttention{
+  padding: 0 20rpx;
+}
 .singleTopic-box{
   width: 100%;
   box-sizing: border-box;

@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/attention/attention",
     "pages/home/home",
+    "pages/attention/attention",
     "pages/personalFiles/personalFiles",
     "pages/eventMuseum/eventMuseum",
     "pages/index/index",

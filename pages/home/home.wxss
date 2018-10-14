@@ -1,7 +1,4 @@
 /* pages/home/home.wxss */
-page{
-    background: #f5f9fa;
-}
 .header{
     height: 80rpx;
     position: relative;
