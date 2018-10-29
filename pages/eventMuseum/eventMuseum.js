@@ -6,9 +6,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-    title:"故事博物馆"
+    // title:"故事博物馆"
+    navbar: ['时事热点', '明星娱乐', '体育赛事','专题'],
+    currentTab: 0,
+    navbarData: {
+      showCapsule: 1, //是否显示左上角图标
+      showSearch:false,
+      title: '故事博物馆', //导航栏 中间的标题
+    },
+    // 此页面 页面内容距最顶部的距离
+    height: app.globalData.height * 2 + 20, 
   },
-
+  navbarTap: function (e) {
+    this.setData({
+      currentTab: e.currentTarget.dataset.idx
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

@@ -1,8 +1,7 @@
 /* pages/home/home.wxss */
-.header{
+/* .header{
     height: 80rpx;
     position: relative;
-    /* background: #fbfbfb url("lib/imgs/home_background.png") no-repeat; */
 }
 .background{
     height: 80rpx;
@@ -29,15 +28,22 @@
     position: absolute;
     top:25%;
     left: 5%;
-}
+} */
 .singleTopic-box{
   width: 100%;
   padding: 16rpx;
   box-sizing: border-box;
   background: #f5f9fa;
+  margin-top:100rpx;
 }
 .singleTopic{
   width: 100%;
   font-size: 14px;
   margin:20rpx 0;
+}
+.home-page {
+  height: 160rpx;
+  width: 100%;
+  border: 1rpx solid red;
+  font-size: 60rpx;
 }

@@ -12,7 +12,7 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "战队小程序",
     "navigationBarTextStyle": "black",
-    "navigationStyle": "default"
+    "navigationStyle": "custom"
   },
   "tabBar": {
     "list": [

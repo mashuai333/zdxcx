@@ -1,4 +1,6 @@
 // pages/attention/attention.js
+const app = getApp()
+
 Page({
   /**
    * 页面的初始数据
@@ -11,6 +13,13 @@ Page({
       { id: 3, title: "进口药危机", time: 12000, data: {}, follow: true },
     ],
     cancleWidth:75,
+    navbarData: {
+      showCapsule: false, //是否显示左上角图标
+      showSearch:1,
+      title: ' ', //导航栏 中间的标题
+    },
+    // 此页面 页面内容距最顶部的距离
+    height: app.globalData.height * 2 + 20, 
     
   },
   onLoad: function (options) {},

@@ -1,12 +1,13 @@
 <!--pages/eventMuseum/eventMuseum.wxml-->
-<scroll-view scroll-x="true" class="menubar">
+<!-- <scroll-view scroll-x="false" class="menubar">
     <view class="menu">
         <text class="{{dataId=='0'?'active':''}}" bindtap="check" id="top" data-id="0">时事热点</text>
         <text class="{{dataId=='1'?'active':''}}" bindtap="check" id="shehui" data-id="1">明星娱乐</text>
         <text class="{{dataId=='2'?'active':''}}" bindtap="check" id="guonei" data-id="2">体育赛事</text>
         <text class="{{dataId=='3'?'active':''}}" bindtap="check" id="guoji" data-id="3">专题</text>
     </view>
-</scroll-view><scroll-view scroll-y="true" class="content" style="height: {{windowHeight}}px; width: {{windowWidth}}px;" scroll-y="true" bindscrolltoupper="pullDownRefresh" bindscrolltolower="pullUpLoad">
+</scroll-view> -->
+<!-- <scroll-view scroll-y="true" class="content" style="height: {{windowHeight}}px; width: {{windowWidth}}px;" scroll-y="true" bindscrolltoupper="pullDownRefresh" bindscrolltolower="pullUpLoad"> -->
     <!--top-->
     <!-- <view class="newsBox top">
         <block wx:for="{{title}}">
@@ -22,4 +23,29 @@
             </navigator>
         </block>
     </view> -->
-</scroll-view>
+<!-- </scroll-view> -->
+
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}"   wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+ 
+<!--时事热点-->
+<view hidden="{{currentTab!==0}}">
+  时事热点
+</view>
+ 
+<!--明星娱乐-->
+<view hidden="{{currentTab!==1}}">
+  明星娱乐
+</view>
+ 
+<!--体育赛事-->
+<view hidden="{{currentTab!==2}}">
+  体育赛事
+</view>
+<!--专题-->
+<view hidden="{{currentTab!==3}}">
+  专题
+</view>

@@ -1,6 +1,7 @@
 /* pages/attention/attention.wxss */
 .myAttention{
   padding: 0 20rpx;
+  margin-top:136rpx;
 }
 .singleTopic-box{
   width: 100%;

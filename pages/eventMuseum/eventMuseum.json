@@ -1,14 +1,14 @@
 {
-  "pages": [
-    "pages/index/index",
-    "pages/logs/logs"
-  ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "故事博物馆",
     "navigationBarTextStyle": "black",
     "navigationStyle": "default"
+  },
+  "usingComponents": {
+    "singleTopic": "/components/singleTopic/singleTopic",
+    "nav-bar": "/components/navbar/navbar"
   }
   
   

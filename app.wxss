@@ -11,4 +11,6 @@
 } 
 page{
   background: #f5f9fa;
+  position: relative;
+  z-index: 9999998;
 }

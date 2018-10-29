@@ -1,11 +1,18 @@
 // pages/personalFiles/personalFiles.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    navbarData: {
+      showCapsule: 1, //是否显示左上角图标
+      showSearch:false,
+      title: '个人档案', //导航栏 中间的标题
+    },
+    // 此页面 页面内容距最顶部的距离
+    height: app.globalData.height * 2 + 20, 
   },
 
   /**

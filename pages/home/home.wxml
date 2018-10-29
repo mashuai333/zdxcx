@@ -1,5 +1,6 @@
 <!--pages/home/home.wxml-->
-<view class="header">
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<!-- <view class="header">
   <image class="background" src="../../lib/imgs/home_background.png">
   </image>
   <image class="classify" src="../../lib/imgs/classify.png">
@@ -8,22 +9,7 @@
     <icon type="search" size="12"></icon>
     <input type="text" placeholder="大家都在搜什么呢？" adjust-position='true' name='search' bindinput='InputSearch' disabled="true"/>
   </view>
-  
-  <!-- <block wx:for="{{[1, 2, 3]}}">
-    <view> {{index}}: {{item}}</view>
-  </block> -->
-  <!-- <view bindtap="viewTap"> click me </view>
-  <view>{{text}}</view>
-  <button bindtap="changeText"> Change normal data </button>
-  <view>{{num}}</view>
-  <button bindtap="changeNum"> Change normal num </button>
-  <view>{{array[0].text}}</view>
-  <button bindtap="changeItemInArray"> Change Array data </button>
-  <view>{{object.text}}</view>
-  <button bindtap="changeItemInObject"> Change Object data </button>
-  <view>{{newField.text}}</view>
-  <button bindtap="addNewField"> Add new data </button> -->
-</view>
+</view> -->
 <view class="singleTopic-box">
   <view class="singleTopic"  wx:for ="{{[1,2,3,4]}}" wx:key="*this">
     <singleTopic id='singleTopic' 

@@ -1,4 +1,5 @@
 <!--pages/attention/attention.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
 <view class="myAttention">
     <view class="singleTopic-box" wx:for="{{renderData}}" wx:key="{{index}}">
         <view class="singleTopic" style="{{item.txtStyle}}"  bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE"  data-index="{{index}}">

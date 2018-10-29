@@ -1,6 +1,7 @@
 /* pages/personalFiles/personalFiles.wxss */
 .personal{
     padding:0 20rpx;
+    margin-top:164rpx;
 }
 .histroy_data{
     width: 100%;

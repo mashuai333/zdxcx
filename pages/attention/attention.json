@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "我的关注",
   "usingComponents": {
-    "singleTopic": "/components/singleTopic/singleTopic"
+    "singleTopic": "/components/singleTopic/singleTopic",
+    "nav-bar": "/components/navbar/navbar"
   }
 }

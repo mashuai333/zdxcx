@@ -1,4 +1,5 @@
 <!--pages/personalFiles/personalFiles.wxml-->
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
 <view class="personal">
   <view class="histroy_data">
     <view class="histroy_data_left">

@@ -1,6 +1,6 @@
 // pages/home/home.js
 //获取应用实例
-// const app = getApp()
+const app = getApp()
 // app.globalData.count+= 2
 // console.log(getApp().globalData.count)
 Page({
@@ -9,104 +9,54 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
-  },
-  switch: function(e) {
-    const length = this.data.objectArray.length
-    for (let i = 0; i < length; ++i) {
-      const x = Math.floor(Math.random() * length)
-      const y = Math.floor(Math.random() * length)
-      const temp = this.data.objectArray[x]
-      this.data.objectArray[x] = this.data.objectArray[y]
-      this.data.objectArray[y] = temp
-    }
-    this.setData({
-      objectArray: this.data.objectArray
-    })
-  },
-  addToFront: function(e) {
-    const length = this.data.objectArray.length
-    this.data.objectArray = [{id: length, unique: 'unique_' + length}].concat(this.data.objectArray)
-    this.setData({
-      objectArray: this.data.objectArray
-    })
-  },
-  addNumberToFront: function(e){
-    this.data.numberArray = [ this.data.numberArray.length + 1 ].concat(this.data.numberArray)
-    this.setData({
-      numberArray: this.data.numberArray
-    })
-  },
-  changeText: function () {
-    // this.data.text = 'changed data' // 不要直接修改 this.data
-    // 应该使用 setData
-    this.setData({
-      text: 'changed data'
-    })
-  },
-  changeNum: function () {
-    // 或者，可以修改 this.data 之后马上用 setData 设置一下修改了的字段
-    this.data.num = 1
-    this.setData({
-      num: this.data.num
-    })
-  },
-  changeItemInArray: function () {
-    // 对于对象或数组字段，可以直接修改一个其下的子字段，这样做通常比修改整个对象或数组更好
-    this.setData({
-      'array[0].text': 'changed data'
-    })
-  },
-  changeItemInObject: function () {
-    this.setData({
-      'object.text': 'changed data'
-    });
-  },
-  addNewField: function () {
-    this.setData({
-      'newField.text': 'new data'
-    })
+    navbarData: {
+      showCapsule: false, //是否显示左上角图标
+      showSearch:1,
+      title: ' ', //导航栏 中间的标题
+    },
+    // 此页面 页面内容距最顶部的距离
+    height: app.globalData.height * 2 + 20, 
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(this.data.height)
   },
-  getTypeData: function (page) {
-    wx.request({
-      url: 'http://v.juhe.cn/toutiao/index?type=' + app.requestUrl + '&key=1c84600b999ae65c986571e77b403fab',
-      method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-      // header: {}, // 设置请求的 header
-      success: (res) => {
-        // success
-        //   console.log( res.data.result.data );
-        var data = res.data.result.data;
-        for (var i = page; i < page + 5; i++) {
-          app.title.push(data[i].title);
-          app.imgUrls.push(data[i].thumbnail_pic_s);
-          app.author.push(data[i].author_name);
-          app.date.push(data[i].date);
-          app.url.push(data[i].url);
-        }
-        //   console.log( app.imgUrls );
-        this.setData({
-          title: app.title,
-          imgUrls: app.imgUrls,
-          author: app.author,
-          date: app.date,
-          page: app.page
-        })
-      },
-      fail: function () {
-        // fail
-      },
-      complete: function () {
-        // complete
-        wx.hideToast();
-      }
-    })
-  },
+  // getTypeData: function (page) {
+  //   wx.request({
+  //     url: 'http://v.juhe.cn/toutiao/index?type=' + app.requestUrl + '&key=1c84600b999ae65c986571e77b403fab',
+  //     method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+  //     // header: {}, // 设置请求的 header
+  //     success: (res) => {
+  //       // success
+  //       //   console.log( res.data.result.data );
+  //       var data = res.data.result.data;
+  //       for (var i = page; i < page + 5; i++) {
+  //         app.title.push(data[i].title);
+  //         app.imgUrls.push(data[i].thumbnail_pic_s);
+  //         app.author.push(data[i].author_name);
+  //         app.date.push(data[i].date);
+  //         app.url.push(data[i].url);
+  //       }
+  //       //   console.log( app.imgUrls );
+  //       this.setData({
+  //         title: app.title,
+  //         imgUrls: app.imgUrls,
+  //         author: app.author,
+  //         date: app.date,
+  //         page: app.page
+  //       })
+  //     },
+  //     fail: function () {
+  //       // fail
+  //     },
+  //     complete: function () {
+  //       // complete
+  //       wx.hideToast();
+  //     }
+  //   })
+  // },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -165,7 +115,7 @@ Page({
 
   onPageScroll: function () {
     // Do something when page scroll
-    console.log('home页面在滚动')
+    // console.log('home页面在滚动')
   },
 
   InputSearch: function(e){
