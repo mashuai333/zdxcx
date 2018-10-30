@@ -10,21 +10,23 @@ function initChart(canvas, width, height) {
 
   var option = {
     tooltip: {
-      trigger: 'axis'
+      trigger: 'axis',
+      confine:true,
     },
     backgroundColor: 'rgb(236,236,236)',
-    legend: {
-      data: ['美国无耻', '中兴无信']
-    },
+    // legend: {
+    //   data: ['美国无耻', '中兴无信']
+    // },
     grid: {
-      top: 40,
+      top: '10%',
       left: 20,
       right: 20,
-      bottom: 20
+      bottom: '5%'
     },
     xAxis: {
       type: 'category',
       boundaryGap: false,
+      offset:0,
       data: ['', '', '', '', '', '', '']
     },
     yAxis: {
@@ -41,7 +43,7 @@ function initChart(canvas, width, height) {
         itemStyle: {
           color: '#f66'
         },
-        data: [11, 11, 15, 13, 12, 13, 10]
+        data: [11, 30, 45, 90, 12, 30, 10]
       },
       {
         name: '中兴无信',
@@ -49,7 +51,7 @@ function initChart(canvas, width, height) {
         itemStyle: {
           color: '#67b9ff'
         },
-        data: [-11, -11, -15, -13, -12, -13, -10]
+        data: [-11, -30, -15, -60, -12, -43, -10]
       }
     ]
   };
