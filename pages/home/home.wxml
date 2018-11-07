@@ -1,5 +1,5 @@
 <!--pages/home/home.wxml-->
-<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<nav-bar navbar-data='{{navbarData}}' />
 <!-- <view class="header">
   <image class="background" src="../../lib/imgs/home_background.png">
   </image>
@@ -11,12 +11,14 @@
   </view>
 </view> -->
 <view class="singleTopic-box">
-  <view class="singleTopic"  wx:for ="{{[1,2,3,4]}}" wx:key="*this">
-    <singleTopic id='singleTopic' 
-      title='中兴芯片危机' 
-      time='1200'
-      data='{}'
-      follow='false'>
-    </singleTopic>
-  </view>
+	<view class="singleTopic" wx:for="{{[1,2,3,4]}}" wx:key="*this">
+		<singleTopic
+		 id='singleTopic'
+		 title='中兴芯片危机'
+		 time='1200'
+		 data='{}'
+		 follow='false'
+		/>
+	</view>
 </view>
+

@@ -10,10 +10,10 @@
             follow='{{item.follow}}'>
           </singleTopic>
         </view>
-        <!--这里是左滑按钮部分----start-->
+        <!--这里是左滑按钮部分start-->
         <view bindtap="cancleAttention" class="posit" wx:if="{{item.follow}}">
             <view class="cancle" data-id="{{item.id}}" data-index="{{index}}" catchtap="cancle">取消关注</view>
         </view>
-        <!--这里是左滑按钮部分----end-->
+        <!--这里是左滑按钮部分-end-->
       </view>
 </view>

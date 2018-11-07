@@ -1,55 +1,70 @@
 /* pages/eventMuseum/eventMuseum.wxss */
-/* .menubar{
-    height: 80rpx;
-    background: #f4f5f6;
-    position: fixed;
-    left:0;
-    top:0;
-    z-index: 99;
-    white-space: nowrap;
+
+.navbar {
+    flex: none;
     display: flex;
+    background: #fff;
+    margin-top: 124rpx;
 }
-.menu{
-    width:1070rpx;
-    height: 80rpx;
-    line-height: 80rpx;
-    background: #f4f5f6;
-}
-.menu text{
-    display: inline-block;
-    padding:0 40rpx;
-    font-size: 30rpx;
-    height: 100%;
+
+.navbar .item {
+    position: relative;
+    flex: auto;
     text-align: center;
+    line-height: 74rpx;
+    font-size: 32rpx;
+    color: #c7c7c7;
 }
-.menu text.active{
-    color:#d43d3d;
-    border-bottom: 6rpx solid;
-} */
-.navbar{
-  flex: none;
-  display: flex;
-  background: #fff;
-  margin-top: 124rpx;
+
+.navbar .item.active {
+    color: #05cdcd;
 }
-.navbar .item{
-  position: relative;
-  flex: auto;
-  text-align: center;
-  line-height: 74rpx;
-  font-size: 32rpx;
+
+.navbar .item.active:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 35%;
+    right: 35%;
+    height: 6rpx;
+    background: #05cdcd;
+}
+.singleTopic-box{
+  width: 100%;
+  padding:  0 20rpx;
+  box-sizing: border-box;
+  background: #f5f9fa;
+}
+.singleTopic {
+  width: 100%;
+  font-size: 14px;
+}
+.filter{
+  height: 46rpx;
+  line-height: 46rpx;
+  font-size: 24rpx;
+}
+.hot{
   color:#c7c7c7;
+  padding:0 16rpx 0 60rpx;
+  /* border-right: 1px solid #000; */
+  position: relative;
 }
-.navbar .item.active{
-  color: #05cdcd;
+.hot ::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 30%;
+    right: 0;
+    width: 2px;
+    height: 16rpx;
+    background: #000;
 }
-.navbar .item.active:after{
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 35%;
-  right: 35%;
-  height: 6rpx;
-  background: #05cdcd;
+.time{
+  padding:0 0 0 16rpx;
+}
+.mycollet{
+  float: right;
+  padding-right: 60rpx;
 }
