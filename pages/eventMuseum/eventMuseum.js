@@ -25,7 +25,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log("故事options",options)
+    app.editTabBar2();
+      // this.resetData();
+      // this.loading();
+      // this.getTypeData(app.page);
   },
 
   /**
@@ -48,12 +52,6 @@ Page({
         })
       }
     })
-  },
-  
-  onLoad: function () {
-    // this.resetData();
-    // this.loading();
-    // this.getTypeData(app.page);
   },
   // getTypeData: function (page) {
   //   wx.request({

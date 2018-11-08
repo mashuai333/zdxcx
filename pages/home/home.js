@@ -1,8 +1,7 @@
 // pages/home/home.js
 //获取应用实例
 const app = getApp()
-// app.globalData.count+= 2
-// console.log(getApp().globalData.count)
+
 Page({
 
   /**
@@ -16,11 +15,14 @@ Page({
     },
     // 此页面 页面内容距最顶部的距离
     height: app.globalData.height * 2 + 20, 
+    
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log("homeoptions", options)
+    app.editTabBar();
     console.log(this.data.height)
   },
   // getTypeData: function (page) {
@@ -67,7 +69,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log("home页面"+this.route)
+    // console.log("home页面"+this.route)
   },
 
   /**

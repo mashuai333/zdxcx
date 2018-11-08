@@ -55,6 +55,7 @@
   line-height: 80rpx;
 }
 .chartCont{
+  z-index: 0;
   height: 140rpx;
   /* height: 100%; */
 }

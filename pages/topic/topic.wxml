@@ -1,0 +1,7 @@
+<!--pages/topic.wxml-->
+<import src="../../tabbar.wxml"/>
+
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+
+<template is="tabBar" data="{{tabBar: tabBar}}">
+</template>

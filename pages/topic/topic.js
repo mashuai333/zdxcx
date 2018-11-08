@@ -1,4 +1,4 @@
-// pages/personalFiles/personalFiles.js
+// pages/topic.js
 const app = getApp()
 Page({
 
@@ -7,9 +7,9 @@ Page({
    */
   data: {
     navbarData: {
-      showCapsule: 1, //是否显示左上角图标
-      showSearch:false,
-      title: '个人档案', //导航栏 中间的标题
+      showCapsule: false, //是否显示左上角图标
+      showSearch: 1,
+      title: ' ', //导航栏 中间的标题
     },
     // 此页面 页面内容距最顶部的距离
     height: app.globalData.height * 2 + 20, 
@@ -19,7 +19,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    app.editTabBar();
+    app.editTabBar2();
   },
 
   /**
@@ -33,7 +33,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log("个人档案" + this.route)
+
   },
 
   /**

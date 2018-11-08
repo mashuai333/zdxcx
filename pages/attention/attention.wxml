@@ -1,5 +1,8 @@
 <!--pages/attention/attention.wxml-->
+<import src="../../tabbar.wxml"/>
 <nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<template is="tabBar" data="{{tabBar: tabBar}}">
+</template>
 <view class="myAttention">
     <view class="singleTopic-box" wx:for="{{renderData}}" wx:key="{{index}}">
         <view class="singleTopic" style="{{item.txtStyle}}"  bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE"  data-index="{{index}}">

@@ -22,7 +22,9 @@ Page({
     height: app.globalData.height * 2 + 20, 
     
   },
-  onLoad: function (options) {},
+  onLoad: function (options) {
+    app.editTabBar();
+  },
   //手指刚放到屏幕触发
   touchS: function (e) {
     console.log("touchS", e);

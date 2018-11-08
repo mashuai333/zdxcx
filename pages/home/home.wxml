@@ -1,15 +1,8 @@
 <!--pages/home/home.wxml-->
-<nav-bar navbar-data='{{navbarData}}' />
-<!-- <view class="header">
-  <image class="background" src="../../lib/imgs/home_background.png">
-  </image>
-  <image class="classify" src="../../lib/imgs/classify.png">
-  </image>
-  <view class="search" >
-    <icon type="search" size="12"></icon>
-    <input type="text" placeholder="大家都在搜什么呢？" adjust-position='true' name='search' bindinput='InputSearch' disabled="true"/>
-  </view>
-</view> -->
+<import src="../../tabbar.wxml"/>
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<template is="tabBar" data="{{tabBar: tabBar}}">
+</template>
 <view class="singleTopic-box">
 	<view class="singleTopic" wx:for="{{[1,2,3,4]}}" wx:key="*this">
 		<singleTopic

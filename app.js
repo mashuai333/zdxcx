@@ -1,11 +1,12 @@
 //app.js
 App({
-  onLaunch: function (options) {
+  onLaunch: function(options) {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
     // 判断是否由分享进入小程序
+    console.log(options)
     if (options.scene == 1007 || options.scene == 1008) {
       this.globalData.share = true
     } else {
@@ -18,6 +19,7 @@ App({
     //虽然最后解决了，但是花费了不少时间
     wx.getSystemInfo({
       success: (res) => {
+        console.log("获取系统信息", res)
         this.globalData.height = res.statusBarHeight
       }
     })
@@ -36,6 +38,7 @@ App({
           wx.getUserInfo({
             success: res => {
               // 可以将 res 发送给后台解码出 unionId
+              // console.log("获取用户信息", res)
               this.globalData.userInfo = res.userInfo
 
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
@@ -50,9 +53,147 @@ App({
     })
   },
   globalData: {
-    userInfo:null,
-    share: false,  // 分享默认为false
+    userInfo: null,
+    share: false, // 分享默认为false
     height: 0,
+    tabBar: {
+      "borderStyle": "black",
+      "backgroundColor": "#fff",
+      "selectedColor": "#000",
+      "position": "bottom",
+      "list": [
+        {
+          "pagePath": "/pages/home/home",
+          "text": "首页",
+          "iconPath": "../../lib/imgs/home.png",
+          "selectedIconPath": "../../lib/imgs/home1.png",
+          "selectedColor": "#666",
+          "clas": "menu-item",
+          "active": true
+        },
+        {
+          "pagePath": "/pages/attention/attention",
+          "text": "我的关注",
+          "iconPath": "../../lib/imgs/attention.png",
+          "selectedIconPath": "../../lib/imgs/attention1.png",
+          "selectedColor": "#666",
+          "clas": "menu-item",
+          "active": false
+        },
+        {
+          "pagePath": "/pages/personalFiles/personalFiles",
+          "text": "个人档案",
+          "iconPath": "../../lib/imgs/personal.png",
+          "selectedIconPath": "../../lib/imgs/personal1.png",
+          "selectedColor": "#666",
+          "clas": "menu-item",
+          "active": false
+        },
+        {
+          "pagePath": "/pages/eventMuseum/eventMuseum",
+          "text": "事件博物馆",
+          "iconPath": "../../lib/imgs/story.png",
+          "selectedIconPath": "../../lib/imgs/story1.png",
+          "selectedColor": "#666",
+          "clas": "menu-item",
+          "active": false
+        }
+      ],
+    },
+    tabBar2: {
+      "borderStyle": "black",
+      "backgroundColor": "#fff",
+      "selectedColor": "#000",
+      "position": "bottom",
+      "list": [
+        {
+          "pagePath": "/pages/home/home",
+          "text": "首页",
+          "iconPath": "../../lib/imgs/home.png",
+          "selectedIconPath": "../../lib/imgs/home1.png",
+          "selectedColor": "#666",
+          "clas": "menu-item",
+          "active": false
+        },
+        {
+          "pagePath": "/pages/attention/attention",
+          "text": "我的关注",
+          "iconPath": "../../lib/imgs/attention.png",
+          "selectedIconPath": "../../lib/imgs/attention1.png",
+          "selectedColor": "#666",
+          "clas": "menu-item",
+          "active": false
+        },
+        {
+          "pagePath": "/pages/topic/topic",
+          "text": "话题",
+          "iconPath": "../../lib/imgs/topic.png",
+          "selectedIconPath": "../../lib/imgs/topic1.png",
+          "selectedColor": "#666",
+          "clas": "menu-item",
+          "active": true
+        },
+        {
+          "pagePath": "/pages/personalFiles/personalFiles",
+          "text": "个人档案",
+          "iconPath": "../../lib/imgs/personal.png",
+          "selectedIconPath": "../../lib/imgs/personal1.png",
+          "selectedColor": "#666",
+          "clas": "menu-item",
+          "active": false
+        },
+        {
+          "pagePath": "/pages/eventMuseum/eventMuseum",
+          "text": "事件博物馆",
+          "iconPath": "../../lib/imgs/story.png",
+          "selectedIconPath": "../../lib/imgs/story1.png",
+          "selectedColor": "#666",
+          "clas": "menu-item",
+          "active": false
+        }
+      ]
+    }
+  },
+  //第一种状态的底部
+  editTabBar: function() {
+    var _curPageArr = getCurrentPages();
+    console.log(_curPageArr)
+    var _curPage = _curPageArr[_curPageArr.length - 1];
+    var _pagePath = _curPage.__route__;
+    if (_pagePath.indexOf('/') != 0) {
+      _pagePath = '/' + _pagePath;
+    }
+    var tabBar = this.globalData.tabBar;
+    console.log("tabBar", tabBar)
+    for (var i = 0; i < tabBar.list.length; i++) {
+      tabBar.list[i].active = false;
+      if (tabBar.list[i].pagePath == _pagePath) {
+        tabBar.list[i].active = true; //根据页面地址设置当前页面状态  
+      }
+    }
+    _curPage.setData({
+      tabBar: tabBar
+    });
+  },
+  //第二种状态的底部
+  editTabBar2: function() {
+    var _curPageArr = getCurrentPages();
+    console.log("_curPageArr", _curPageArr)
+    var _curPage = _curPageArr[_curPageArr.length - 1];
+    var _pagePath = _curPage.__route__;
+    if (_pagePath.indexOf('/') != 0) {
+      _pagePath = '/' + _pagePath;
+    }
+    var tabBar = this.globalData.tabBar2;
+    for (var i = 0; i < tabBar.list.length; i++) {
+      tabBar.list[i].active = false;
+      if (tabBar.list[i].pagePath == _pagePath) {
+        tabBar.list[i].active = true; //根据页面地址设置当前页面状态  
+      }
+    }
+    _curPage.setData({
+      tabBar: tabBar
+    });
   },
   title: [],
   imgUrls: [],
