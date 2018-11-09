@@ -14,14 +14,14 @@ page{
   position: relative;
 }
 
-
-
 .tab-bar{
   z-index: 999;
   position: fixed;
   display: flex;
   width: 100%;
-  font-size: 28rpx;
+  font-size: 24rpx;
+  bottom:0;
+  border-top:1px solid #daebe5;
 }
 .menu-item{
   flex:1;
@@ -37,8 +37,3 @@ page{
 .clear{
   clear: both;
 }
-/* .menu-item2{
- display: flex;
-  text-align: center;
-  padding-top: 8px;
-} */

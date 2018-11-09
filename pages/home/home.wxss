@@ -1,42 +1,13 @@
 /* pages/home/home.wxss */
 
-/* .header{
-    height: 80rpx;
-    position: relative;
-}
-.background{
-    height: 80rpx;
-    width: 100%;
-}
-.classify{
-  height: 55rpx;
-  width: 60rpx;
-  position: absolute;
-  left: 16rpx;
-  top:12rpx;
-}
-.search{
-    text-align: center;
-    font-size: 11px;
-    width:600rpx;
-    background:#efefef;
-    position: absolute;
-    top: 14rpx;
-    right:40rpx;
-    border-radius: 30rpx;
-}
-.search icon{
-    position: absolute;
-    top:25%;
-    left: 5%;
-} */
 
 .singleTopic-box {
     width: 100%;
-    padding: 20rpx;
+    padding:20rpx;
     box-sizing: border-box;
     background: #f5f9fa;
     margin-top: 100rpx;
+    margin-bottom:40px;
 }
 
 .singleTopic {
@@ -44,10 +15,3 @@
     font-size: 14px;
     margin: 20rpx 0;
 }
-
-/* .home-page {
-    height: 160rpx;
-    width: 100%;
-    border: 1rpx solid red;
-    font-size: 60rpx;
-} */

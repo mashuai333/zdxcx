@@ -9,11 +9,17 @@ Component({
     }
   },
   data: {
-    height: '',
-    //默认值  默认显示左上角
+    height: 20,
+    //默认值  貌似不管事
     navbarData: {
-      showCapsule: false,
-      showSearch:false
+      showTitle: true,
+      // showSearch:false,
+      showTopic: false,
+      title:'战队小程序',
+      imgBgUrl: 'url(../../lib/imgs/home_background.png)',
+      contTitle:'中心芯片危机',
+      leftTime:'20:20:20',
+      curNum:'5万'
     }
   },
   attached: function () {

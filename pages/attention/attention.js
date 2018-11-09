@@ -7,16 +7,18 @@ Page({
    */
   data: {
     renderData:[
-      { id: 0, title: "美国第三方危机", time: 15666, data: {}, follow: true },
-      { id: 1, title: "中心危机危机", time: 19880, data: {}, follow: true },
-      { id: 2, title: "伊拉克危机", time: 15666, data: {}, follow: true },
-      { id: 3, title: "进口药危机", time: 12000, data: {}, follow: true },
+      { id: 0, title: "美国第三方危机", time: 15666, data: [{ imgbg: app.globalData.imgbgurl }], follow: true },
+      { id: 1, title: "中心危机危机", time: 19880, data: [{ imgbg: app.globalData.imgbgurl }], follow: true },
+      { id: 2, title: "伊拉克危机", time: 15666, data: [{ imgbg: app.globalData.imgbgurl }], follow: true },
+      { id: 3, title: "进口药危机", time: 12000, data: [{ imgbg: app.globalData.imgbgurl }], follow: true },
     ],
     cancleWidth:75,
     navbarData: {
-      showCapsule: false, //是否显示左上角图标
-      showSearch:1,
-      title: ' ', //导航栏 中间的标题
+      showTitle: true, //是否显示页面标题
+      // showSearch: false,
+      showTopic: false,
+      title: '我的关注', //导航栏 中间的标题内容
+      imgBgUrl: app.globalData.imgbgurl
     },
     // 此页面 页面内容距最顶部的距离
     height: app.globalData.height * 2 + 20, 

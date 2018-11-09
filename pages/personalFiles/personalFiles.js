@@ -7,9 +7,11 @@ Page({
    */
   data: {
     navbarData: {
-      showCapsule: 1, //是否显示左上角图标
-      showSearch:false,
-      title: '个人档案', //导航栏 中间的标题
+      showTitle: true, //是否显示页面标题
+      // showSearch: false,
+      showTopic: false,
+      title: '个人档案', //导航栏 中间的标题内容
+      imgBgUrl: app.globalData.imgbgurl
     },
     // 此页面 页面内容距最顶部的距离
     height: app.globalData.height * 2 + 20, 

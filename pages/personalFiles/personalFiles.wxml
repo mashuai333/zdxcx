@@ -8,18 +8,19 @@
   <view class="histroy_data">
     <view class="histroy_data_left">
       <text class="main_header">平均发言N条</text>
-      <n />
+      <n/>
       <text class="vice_header">战胜了99%的用户</text>
       <image class="pic" src="../../lib/imgs/SprayGod.png">
       </image>
     </view>
     <view class="histroy_data_right">
       <text class="main_header">参加过N个话题战队</text>
+      <n/>
       <text class="vice_header">战胜了15%的用户</text>
       <image class="pic" src="../../lib/imgs/Rubberneck.png">
       </image>
     </view>
-    <view class="histroy_data_title" style="background:{{'url(../../lib/imgs/personal_bg.png) no-repeat'}};background-size:330rpx 60rpx">
+    <view class="histroy_data_title" style="background-image:{{'url(../../lib/imgs/personal_bg.png) '}};">
       <text class="text_title">个人历史数据</text>
     </view>
   </view>

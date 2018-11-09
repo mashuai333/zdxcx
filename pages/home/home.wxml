@@ -3,6 +3,7 @@
 <nav-bar navbar-data='{{navbarData}}'></nav-bar>
 <template is="tabBar" data="{{tabBar: tabBar}}">
 </template>
+
 <view class="singleTopic-box">
 	<view class="singleTopic" wx:for="{{[1,2,3,4]}}" wx:key="*this">
 		<singleTopic

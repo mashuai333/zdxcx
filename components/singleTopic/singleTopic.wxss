@@ -13,6 +13,7 @@
     border-radius: 12rpx 12rpx 0 0 ;
     position: relative;
     display: flex;
+    background-repeat: no-repeat;
 }
 .top_title{
   padding: 20rpx 0 0 20rpx;
@@ -23,13 +24,7 @@
   margin:auto;
 }
 
-.follow{
-  position: absolute;
-  left:0;
-  bottom:0;
-  width: 38rpx;
-  height: 39rpx;
-}
+
 .st_time{
   float:right;
   font-size: 12px;
@@ -72,4 +67,11 @@
 }
 .title_name{
   font-size: 14px;
+}
+.follow{
+  position: absolute;
+  left:0;
+  bottom:0;
+  width: 38rpx;
+  height: 39rpx;
 }

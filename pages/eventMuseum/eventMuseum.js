@@ -5,13 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-    // title:"故事博物馆"
     navbar: ['时事热点', '明星娱乐', '体育赛事','专题'],
     currentTab: 0,
     navbarData: {
-      showCapsule: 1, //是否显示左上角图标
-      showSearch:false,
-      title: '故事博物馆', //导航栏 中间的标题
+      showTitle: true, //是否显示页面标题
+      // showSearch: false,
+      showTopic: false,
+      title: '事件博物馆', //导航栏 中间的标题内容
+      imgBgUrl: app.globalData.imgbgurl
     },
     // 此页面 页面内容距最顶部的距离
     height: app.globalData.height * 2 + 20, 
@@ -25,8 +26,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log("故事options",options)
-    app.editTabBar2();
+    console.log("事件options",options)
+    app.editTabBar();
+    // app.editTabBar2();
       // this.resetData();
       // this.loading();
       // this.getTypeData(app.page);

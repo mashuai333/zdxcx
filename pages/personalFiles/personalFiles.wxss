@@ -50,6 +50,8 @@
     text-align: center;
     font-size: 32rpx;
     line-height: 60rpx;
+    background-size:330rpx 60rpx;
+    background-repeat: no-repeat;
     /* z-index: 5; */
     /* background: url('../../lib/imgs/personal_bg.png') no-repeat; */
 }

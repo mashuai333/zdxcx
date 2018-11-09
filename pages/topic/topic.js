@@ -7,9 +7,14 @@ Page({
    */
   data: {
     navbarData: {
-      showCapsule: false, //是否显示左上角图标
-      showSearch: 1,
-      title: ' ', //导航栏 中间的标题
+      showTitle: false, //是否显示页面标题
+      // showSearch: false,
+      showTopic: true,
+      title: '', //导航栏 中间的标题内容
+      imgBgUrl: app.globalData.imgbgurl,//设置背景链接
+      contTitle: '中心芯片危机',
+      leftTime: '20:20:20',
+      curNum: '5万'
     },
     // 此页面 页面内容距最顶部的距离
     height: app.globalData.height * 2 + 20, 

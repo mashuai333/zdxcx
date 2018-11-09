@@ -1,8 +1,8 @@
 import * as echarts from '../../lib/ec-canvas/echarts';
-let chart = null;
+// let chart = null;
 
 function initChart(canvas, width, height) {
-  chart = echarts.init(canvas, null, {
+  const chart = echarts.init(canvas, null, {
     width: width,
     height: height
   });
@@ -10,7 +10,8 @@ function initChart(canvas, width, height) {
 
   var option = {
     tooltip: {
-      trigger: 'axis',
+      show:false,
+      trigger: 'none',
       confine:true,
     },
     backgroundColor: 'rgb(236,236,236)',
@@ -98,11 +99,15 @@ Component({
     ec: {
       onInit: initChart
     },  
-    timeStr: []
+    timeStr: [],
+    reData:[],
   },
   ready: function () {
+    console.log(this.properties)
     console.log(this.properties.time);
-    this.countDown(18204)
+    this.setData({ reData: this.properties.data });
+    
+    this.countDown(this.properties.time)
   },
   /**
    * 组件的方法列表

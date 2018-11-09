@@ -1,5 +1,5 @@
 <view class='wx_single_topic_container'>
-    <view class="st_header" style="background:{{'url(../../lib/imgs/home_background.png) no-repeat'}}">
+    <view class="st_header" style="background-image:{{reData[0].imgbg}}">
         <text class="top_title">{{title}}</text>
         <image class="vsimg" src="../../lib/imgs/vs.png">
         </image>
