@@ -1,12 +1,12 @@
 <view class='wx_single_topic_container'>
-    <view class="st_header" style="background-image:{{reData[0].imgbg}}">
-        <text class="top_title">{{title}}</text>
+    <view class="st_header" style="background-image:{{reData.imgbg}}">
+        <text class="top_title">{{itemTitle}}</text>
         <image class="vsimg" src="../../lib/imgs/vs.png">
         </image>
         <view class="st_time">距结束 <text>{{timeStr[0]}}</text><text>{{timeStr[1]}}</text>时
             <text>{{timeStr[2]}}</text><text>{{timeStr[3]}}</text>分
         </view>
-        <image wx:if="{{follow == 'true'}}" src="../../lib/imgs/follow.png" class="follow"></image>
+        <image wx:if="{{isfollow == 'true'}}" src="../../lib/imgs/follow.png" class="follow"></image>
     </view>
     <view class='st_chart'>
         <view class="instruction">
@@ -24,3 +24,14 @@
         </view>
     </view>
 </view>
+  <view class="singleTopic-box" wx:for="{{renderData}}" wx:key="{{index}}">
+    <view class="singleTopic" style="{{item.txtStyle}}" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}">
+      <singleTopic title='{{item.title}}' time='{{item.time}}' data='{{item.data}}' follow='{{item.follow}}'>
+      </singleTopic>
+    </view>
+    <!--这里是左滑按钮部分start-->
+    <view bindtap="cancleAttention" class="posit" wx:if="{{item.follow}}">
+      <view class="cancle" data-id="{{item.id}}" data-index="{{index}}" catchtap="cancle">取消关注</view>
+    </view>
+    <!--这里是左滑按钮部分-end-->
+  </view>

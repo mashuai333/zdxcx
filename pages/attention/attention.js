@@ -7,7 +7,7 @@ Page({
    */
   data: {
     renderData:[
-      { id: 0, title: "美国第三方危机", time: 15666, data: [{ imgbg: app.globalData.imgbgurl }], follow: true },
+      { id: 0, title: "美国第三方危机", time: 15666, data: [{ imgbg: app.globalData.imgbgurl,square:'',contersquare:'' }], follow: true },
       { id: 1, title: "中心危机危机", time: 19880, data: [{ imgbg: app.globalData.imgbgurl }], follow: true },
       { id: 2, title: "伊拉克危机", time: 15666, data: [{ imgbg: app.globalData.imgbgurl }], follow: true },
       { id: 3, title: "进口药危机", time: 12000, data: [{ imgbg: app.globalData.imgbgurl }], follow: true },

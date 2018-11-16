@@ -7,11 +7,11 @@ App({
     wx.setStorageSync('logs', logs)
     // 判断是否由分享进入小程序
     console.log(options)
-    if (options.scene == 1007 || options.scene == 1008) {
-      this.globalData.share = true
-    } else {
-      this.globalData.share = false
-    };
+    // if (options.scene == 1007 || options.scene == 1008) {
+    //   this.globalData.share = true
+    // } else {
+    //   this.globalData.share = false
+    // };
 
     //获取设备顶部窗口的高度（不同设备窗口高度不一样，根据这个来设置自定义导航栏的高度）
     //这个最初我是在组件中获取，但是出现了一个问题，当第一次进入小程序时导航栏会把
@@ -28,24 +28,24 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        wx.request({
-          url: 'https://dailyvote.cn/v1/client/register?type=201&account=' + res.code,
-          method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-          // header: {}, // 设置请求的 header
-          success: (res) => {
-            console.log("请求成功", res)
-            // success
-          },
-          fail: function () {
-            // fail
-            console.log("请求失败")
-          },
-          complete: function () {
-            // complete
-            console.log("请求完成")
-          }
-          // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        })
+        // wx.request({
+        //   url: 'https://dailyvote.cn/v1/client/register?type=201&account=' + res.code,
+        //   method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+        //   // header: {}, // 设置请求的 header
+        //   success: (res) => {
+        //     console.log("请求成功", res)
+        //     // success
+        //   },
+        //   fail: function () {
+        //     // fail
+        //     console.log("请求失败")
+        //   },
+        //   complete: function () {
+        //     // complete
+        //     console.log("请求完成")
+        //   }
+        //   // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        // })
       }
     })
     // 获取用户信息
