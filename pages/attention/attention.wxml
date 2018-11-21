@@ -1,8 +1,5 @@
 <!--pages/attention/attention.wxml-->
 <import src="../../tabbar.wxml" />
-<nav-bar navbar-data='{{navbarData}}'></nav-bar>
-<template is="tabBar" data="{{tabBar: tabBar}}">
-</template>
 
 <view class="myAttention">
   <view class="singleTopic-box" wx:for="{{renderData}}" wx:key="{{index}}">
@@ -17,3 +14,7 @@
     <!--这里是左滑按钮部分-end-->
   </view>
 </view>
+
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+<template is="tabBar" data="{{tabBar: tabBar}}">
+</template>

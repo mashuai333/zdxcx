@@ -1,10 +1,6 @@
 <!--pages/eventMuseum/eventMuseum.wxml-->
 <import src="../../tabbar.wxml"/>
 
-<nav-bar navbar-data='{{navbarData}}'></nav-bar>
-
-<template is="tabBar" data="{{tabBar: tabBar}}">
-</template>
 
 <view class="navbar">
 	<text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}"   wx:key="unique" bindtap="navbarTap">{{item}}</text>
@@ -44,3 +40,7 @@
 	专题
 </view>
 
+<nav-bar navbar-data='{{navbarData}}'></nav-bar>
+
+<template is="tabBar" data="{{tabBar: tabBar}}">
+</template>

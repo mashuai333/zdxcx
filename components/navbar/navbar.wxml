@@ -1,14 +1,14 @@
 
-<view class='nav-wrap' style='height: {{height*2 + 20}}px;'>
-  <view class="header" style="background-image:{{navbarData.imgBgUrl}}">
+<cover-view class='nav-wrap' style='height: {{height*2 + 20}}px;'>
+  <cover-view class="header" style="background-image:{{navbarData.imgBgUrl}}">
     <block wx:if='{{navbarData.showTitle}}'>
       <!-- 通用头 -->
-      <!-- <image class="imagebg" src='{{navbarData.imgBgUrl}}'>
-      </image> -->
-      <view class='nav-title' style='line-height: {{height*2 + 44}}px;'>{{navbarData.title}}</view>
+      <!-- <cover-image class="imagebg" src='{{navbarData.imgBgUrl}}'>
+      </cover-image> -->
+      <cover-view class='nav-title' style='line-height: {{height*2 + 44}}px;'>{{navbarData.title}}</cover-view>
     </block>
     <!-- 话题战队讨论表头 -->
-    <block wx:if='{{navbarData.showTopic}}'>
+    <!-- <block wx:if='{{navbarData.showTopic}}'>
       <view class='head-topic' style='height: {{height*2+10}}px;'>
         <view class='topic-title'>{{navbarData.contTitle}}</view>
         <view class='vsbg'>
@@ -22,9 +22,9 @@
           </view>
         </view>
       </view>
-    </block>
-  </view>
-</view>
+    </block> -->
+  </cover-view>
+</cover-view>
 <!-- <cover-image wx:if='{{navbarData.showSearch}}' class="classify" src="../../lib/imgs/classify.png">
 </cover-image>
 <view wx:if='{{navbarData.showSearch}}' class="search">

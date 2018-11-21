@@ -24,14 +24,12 @@
         </view>
     </view>
 </view>
-  <view class="singleTopic-box" wx:for="{{renderData}}" wx:key="{{index}}">
+  <!-- <view class="singleTopic-box" wx:for="{{renderData}}" wx:key="{{index}}">
     <view class="singleTopic" style="{{item.txtStyle}}" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}">
       <singleTopic title='{{item.title}}' time='{{item.time}}' data='{{item.data}}' follow='{{item.follow}}'>
       </singleTopic>
     </view>
-    <!--这里是左滑按钮部分start-->
     <view bindtap="cancleAttention" class="posit" wx:if="{{item.follow}}">
       <view class="cancle" data-id="{{item.id}}" data-index="{{index}}" catchtap="cancle">取消关注</view>
     </view>
-    <!--这里是左滑按钮部分-end-->
-  </view>
+  </view> -->
