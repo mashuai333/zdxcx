@@ -26,44 +26,41 @@ Page({
     app.editTabBar();
     console.log(this.data.height)
   },
-  // getTypeData: function (page) {
-  //   wx.request({
-  //     url: 'http://v.juhe.cn/toutiao/index?type=' + app.requestUrl + '&key=1c84600b999ae65c986571e77b403fab',
-  //     method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-  //     // header: {}, // 设置请求的 header
-  //     success: (res) => {
-  //       // success
-  //       //   console.log( res.data.result.data );
-  //       var data = res.data.result.data;
-  //       for (var i = page; i < page + 5; i++) {
-  //         app.title.push(data[i].title);
-  //         app.imgUrls.push(data[i].thumbnail_pic_s);
-  //         app.author.push(data[i].author_name);
-  //         app.date.push(data[i].date);
-  //         app.url.push(data[i].url);
-  //       }
-  //       //   console.log( app.imgUrls );
-  //       this.setData({
-  //         title: app.title,
-  //         imgUrls: app.imgUrls,
-  //         author: app.author,
-  //         date: app.date,
-  //         page: app.page
-  //       })
-  //     },
-  //     fail: function () {
-  //       // fail
-  //     },
-  //     complete: function () {
-  //       // complete
-  //       wx.hideToast();
-  //     }
-  //   })
-  // },
+  getTypeData: function (page) {
+    let token1 = "Basic ZXlKaGJHY2lPaUpJVXpJMU5pSXNJbWxoZENJNk1UVTBNekkwTURVNE55d2laWGh3SWpveE5UUTFPRE15TlRnM2ZRLmV5SjFhV1FpT2pFc0luUjVjR1VpT2pFd01Dd2ljMk52Y0dVaU9pSlZjMlZ5VTJOdmNHVWlmUS5zX3B5ZFVXMl9PNjNjMXVwb1d5OTFoZWgwSVBmRldWeG81U1QzcGFhbGl3Og =="
+    wx.request({
+      url: 'https://dailyvote.cn/v1/event/1',
+      method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+      header: {
+        "Authorization": token1
+      }, // 设置请求的 header
+      success: (res) => {
+        console.log('get请求成功',res)
+        // success
+        //   console.log( res.data.result.data );
+        //   console.log( app.imgUrls );
+        // this.setData({
+        //   title: app.title,
+        //   imgUrls: app.imgUrls,
+        //   author: app.author,
+        //   date: app.date,
+        //   page: app.page
+        // })
+      },
+      fail: function () {
+        // fail
+      },
+      complete: function () {
+        // complete
+        wx.hideToast();
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    this.getTypeData();
   },
     
   /**

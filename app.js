@@ -27,25 +27,34 @@ App({
     // 登录
     wx.login({
       success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        // wx.request({
-        //   url: 'https://dailyvote.cn/v1/client/register?type=201&account=' + res.code,
-        //   method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-        //   // header: {}, // 设置请求的 header
-        //   success: (res) => {
-        //     console.log("请求成功", res)
-        //     // success
-        //   },
-        //   fail: function () {
-        //     // fail
-        //     console.log("请求失败")
-        //   },
-        //   complete: function () {
-        //     // complete
-        //     console.log("请求完成")
-        //   }
-        //   // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        // })
+        //发送 res.code 到后台换取 openId, sessionKey, unionId
+        wx.request({
+          // url: 'https://dailyvote.cn/v1/client/register?type=201&account=' + res.code,
+          url: 'https://dailyvote.cn/v1/client/register',
+          method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+          data:{
+            "nickname": "lijie",
+            "account": "0237ohSL0NfAa524YzTL0HFHSL07ohSG",
+            "secret": "123456",
+            "type": 200
+          },
+          header: {
+            'content-type': 'application/json' //默认  设置请求的 header
+          },
+          success: (res) => {
+            console.log("请求成功", res)
+            // success
+          },
+          fail: function () {
+            // fail
+            console.log("请求失败")
+          },
+          complete: function () {
+            // complete
+            console.log("请求完成")
+          }
+          // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        })
       }
     })
     // 获取用户信息
