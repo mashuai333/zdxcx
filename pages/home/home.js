@@ -2,6 +2,8 @@
 //获取应用实例
 const app = getApp()
 
+var Base64 = require('../../utils/base64.js');
+console.log(Base64)
 Page({
 
   /**
@@ -27,12 +29,17 @@ Page({
     console.log(this.data.height)
   },
   getTypeData: function (page) {
-    let token1 = "Basic ZXlKaGJHY2lPaUpJVXpJMU5pSXNJbWxoZENJNk1UVTBNekkwTURVNE55d2laWGh3SWpveE5UUTFPRE15TlRnM2ZRLmV5SjFhV1FpT2pFc0luUjVjR1VpT2pFd01Dd2ljMk52Y0dVaU9pSlZjMlZ5VTJOdmNHVWlmUS5zX3B5ZFVXMl9PNjNjMXVwb1d5OTFoZWgwSVBmRldWeG81U1QzcGFhbGl3Og =="
+    let token1 = "Basic ZXlKaGJHY2lPaUpJVXpJMU5pSXNJbWxoZENJNk1UVTBNekkwTURVNE55d2laWGh3SWpveE5UUTFPRE15TlRnM2ZRLmV5SjFhV1FpT2pFc0luUjVjR1VpT2pFd01Dd2ljMk52Y0dVaU9pSlZjMlZ5VTJOdmNHVWlmUS5zX3B5ZFVXMl9PNjNjMXVwb1d5OTFoZWgwSVBmRldWeG81U1QzcGFhbGl3Og ==";
+    let token2 = 'Basic ' + app.globalData.token;
+    let token4 = 'Basic '+ Base64.Base64.encode(app.globalData.token);
+    console.log(token1)
+    console.log(token2)
+    console.log(token4)
     wx.request({
       url: 'https://dailyvote.cn/v1/event/1',
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       header: {
-        "Authorization": token1
+        "Authorization": token4
       }, // 设置请求的 header
       success: (res) => {
         console.log('get请求成功',res)

@@ -1,11 +1,11 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/home/home",
     "pages/attention/attention",
     "pages/personalFiles/personalFiles",
     "pages/eventMuseum/eventMuseum",
     "pages/topic/topic",
-    "pages/index/index",
     "pages/logs/logs"
   ],
   "window": {
